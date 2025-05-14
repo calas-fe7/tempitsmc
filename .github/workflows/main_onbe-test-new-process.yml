@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_a7c3b65004cf40b3b7d51d408313d694 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_23d3dfdee5bd40fc88299d688569533f }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_8e6073763e364e93aec44f5b78246889 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_c3b624acf1b64d06bcffd2175ca4525c }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a7c3b65004cf40b3b7d51d408313d694 }}/sample-app-aoai-chatgpt:${{ github.sha }}
+        tags: testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8e6073763e364e93aec44f5b78246889 }}/sample-app-aoai-chatgpt:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'onbe-test-new-process'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8e80ce66d96d4619ac4a714269e6fd1c }}
-        images: 'testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a7c3b65004cf40b3b7d51d408313d694 }}/sample-app-aoai-chatgpt:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a737dc7990a24a53885f1ec89d6631f3 }}
+        images: 'testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8e6073763e364e93aec44f5b78246889 }}/sample-app-aoai-chatgpt:${{ github.sha }}'
