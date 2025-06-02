@@ -31,7 +31,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_test }}/sample-app-aoai-chatgpt:${{ github.sha }}
+        tags: testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/itsmc-test/sample-app-aoai-chatgpt:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
