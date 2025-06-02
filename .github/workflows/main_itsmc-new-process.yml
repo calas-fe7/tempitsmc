@@ -49,4 +49,4 @@ jobs:
         app-name: 'itsmc-new-process'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_test }}
-        images: 'testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_test }}/sample-app-aoai-chatgpt:${{ github.sha }}'
+        images: 'testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/itsmc-test/sample-app-aoai-chatgpt:${{ github.sha }}'
