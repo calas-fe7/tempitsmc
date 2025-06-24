@@ -101,10 +101,10 @@ class _AzureOpenAISettings(BaseSettings):
         env_ignore_empty=True
     )
     
-    model: str = "gpt-4o"
+    model: Optional[str] = None
     key: Optional[str] = None
-    resource: str = "dev-aideskopenai"
-    endpoint: str = "https://dev-aideskopenai.openai.azure.com/"
+    resource: Optional[str] = None
+    endpoint: Optional[str] = None
     temperature: float = 0
     top_p: float = 0
     max_tokens: int = 1000
