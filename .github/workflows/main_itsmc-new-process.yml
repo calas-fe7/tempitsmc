@@ -42,8 +42,8 @@ jobs:
 
       - name: Set up Python version
         env:
-          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZUREOPENAIENDPOINT }}
-          AZURE_OPENAI_MODEL: ${{ secrets.AZUREOPENAIMODEL }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_MODEL: ${{ secrets.AZURE_OPENAI_MODEL }}
         uses: actions/setup-python@v1
         with:
           python-version: '3.11'
