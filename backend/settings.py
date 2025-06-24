@@ -101,7 +101,7 @@ class _AzureOpenAISettings(BaseSettings):
         env_ignore_empty=True
     )
     
-    model: Optional[str] = None
+    model: str
     key: Optional[str] = None
     resource: Optional[str] = None
     endpoint: Optional[str] = None
