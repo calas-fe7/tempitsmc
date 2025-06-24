@@ -103,8 +103,8 @@ class _AzureOpenAISettings(BaseSettings):
     
     model: str
     key: Optional[str] = None
-    resource: Optional[str] = None
-    endpoint: Optional[str] = None
+    resource: str = APPSETTING_AZURE_OPENAI_RESOURCE
+    endpoint: str = APPSETTING_AZURE_OPENAI_ENDPOINT
     temperature: float = 0
     top_p: float = 0
     max_tokens: int = 1000
