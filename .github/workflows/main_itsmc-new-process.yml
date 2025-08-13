@@ -81,7 +81,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'itsmc-new-process'
+        app-name: 'itsmc-container-test'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_test }}
         images: 'testopenaicarlos-g8c9b7hab9dzazeh.azurecr.io/itsmc-test/sample-app-aoai-chatgpt:${{ github.sha }}'
