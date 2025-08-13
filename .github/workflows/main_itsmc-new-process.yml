@@ -74,7 +74,8 @@ jobs:
     needs: build
     environment:
       name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      #url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: https://itsmc-new-process.scm.azurewebsites.net
 
     steps:
     - name: Deploy to Azure Web App
