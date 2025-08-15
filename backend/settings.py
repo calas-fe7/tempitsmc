@@ -30,7 +30,7 @@ DOTENV_PATH = os.environ.get(
         ".env"
     )
 )
-MINIMUM_SUPPORTED_AZURE_OPENAI_PREVIEW_API_VERSION = "2024-05-01-preview"
+MINIMUM_SUPPORTED_AZURE_OPENAI_PREVIEW_API_VERSION = "2024-12-01-preview"
 
 
 class _UiSettings(BaseSettings):
@@ -107,7 +107,6 @@ class _AzureOpenAISettings(BaseSettings):
     endpoint: Optional[str] = None
     temperature: float = 0
     top_p: float = 0
-    max_tokens: int = 10000
     max_completion_tokens: int = 10000
     stream: bool = True
     stop_sequence: Optional[List[str]] = None
